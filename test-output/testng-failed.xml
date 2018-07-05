@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test verbose="2" name="Default test">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Test">
     <classes>
       <class name="com.test.DriverTest"/>
     </classes>
-  </test> <!-- Default test -->
-  <test name="Default test(failed)">
+  </test> <!-- Test -->
+  <test name="Test(failed)">
     <classes>
       <class name="com.test.DriverTest">
         <methods>
           <include name="beforeMethod"/>
           <include name="closeBrowser"/>
           <include name="afterTest"/>
+          <include name="launchBrowser"/>
           <include name="beforeClass"/>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
@@ -22,5 +23,5 @@
         </methods>
       </class> <!-- com.test.DriverTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

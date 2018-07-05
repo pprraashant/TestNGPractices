@@ -12,8 +12,10 @@ public class Driver
 	String operatingSystem=System.getProperty("os.name");
 	String projectPath= System.getProperty("user.dir");
 		
-		if(operatingSystem.contains("windows"))
+		if(operatingSystem.contains("Windows"))
 		{
+			System.setProperty("webdriver.chrome.driver", projectPath+"//exe//ChromeDriver");
+			
 			
 		}
 		else if(operatingSystem.contains("Mac"))

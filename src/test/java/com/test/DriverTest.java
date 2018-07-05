@@ -70,18 +70,19 @@ public class DriverTest {
   }
 
 
-  @Test
+  @Test(dataProvider = "dp")
   public void launchBrowser() {
 	  
+	  System.out.println("Insider LaunchBrowser Test");
     Driver driver=new Driver();
     Assert.assertTrue(driver.launchBrowser("chrome"));
     Assert.assertEquals(driver.closeBrowser(), true);
     
   }
   
-  @Test
+  @Test(dataProvider = "dp")
   public void closeBrowser() {
-	  
+	  System.out.println("Insider CloseBrowser Test");
     Driver driver=new Driver();
     //Assert.assertTrue(driver.launchBrowser("chrome"));
     Assert.assertEquals(driver.closeBrowser(), true);
