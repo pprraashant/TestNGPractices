@@ -18,6 +18,7 @@ import org.testng.annotations.AfterSuite;
 public class DriverTest {
   @Test(dataProvider = "dp")
   public void f(Integer n, String s) {
+	  System.out.println("Inside dataProvider void f method");
   }
   @BeforeMethod
   public void beforeMethod() {
