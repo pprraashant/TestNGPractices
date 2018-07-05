@@ -56,7 +56,7 @@ public class DriverTest {
 
   @AfterTest
   public void afterTest() {
-	  System.out.println("AfterMethod");
+	  System.out.println("AfterTest");
   }
 
   @BeforeSuite
@@ -70,7 +70,7 @@ public class DriverTest {
   }
 
 
-  @Test(dataProvider = "dp")
+  @Test
   public void launchBrowser() {
 	  
 	  System.out.println("Insider LaunchBrowser Test");
@@ -80,7 +80,7 @@ public class DriverTest {
     
   }
   
-  @Test(dataProvider = "dp")
+  @Test
   public void closeBrowser() {
 	  System.out.println("Insider CloseBrowser Test");
     Driver driver=new Driver();

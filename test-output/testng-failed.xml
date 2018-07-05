@@ -13,7 +13,6 @@
           <include name="beforeMethod"/>
           <include name="closeBrowser"/>
           <include name="afterTest"/>
-          <include name="launchBrowser"/>
           <include name="beforeClass"/>
           <include name="beforeTest"/>
           <include name="afterMethod"/>

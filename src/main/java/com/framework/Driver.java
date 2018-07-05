@@ -14,7 +14,7 @@ public class Driver
 		
 		if(operatingSystem.contains("Windows"))
 		{
-			System.setProperty("webdriver.chrome.driver", projectPath+"//exe//ChromeDriver");
+			System.setProperty("webdriver.chrome.driver", projectPath+"//exe//chromedriver.exe");
 			
 			
 		}
