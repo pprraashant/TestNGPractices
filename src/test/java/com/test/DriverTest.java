@@ -8,6 +8,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.BeforeClass;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
@@ -85,7 +87,21 @@ public class DriverTest {
 	  System.out.println("Insider LaunchBrowser Test");
 	  System.out.println("Interger: "+n+" "+"String: "+s);
     Driver driver=new Driver();
-    Assert.assertTrue(driver.launchBrowser("chrome"));
+    Assert.assertTrue(driver.launchBrowser("htmlunit"));
+    driver.driver.get("http://www.google.com");	
+    WebElement element = driver.driver.findElement(By.xpath("//*[@name='q']"));	
+    element.click();
+    // Enter a search query		
+    element.sendKeys("Guru99");	
+   
+    // Submit the query. Webdriver searches for the form using the text input element automatically		
+    // No need to locate/find the submit button		
+    element.submit();			
+    
+	// This code will print the page title		
+    System.out.println("Page title is: " + driver.driver.getTitle());	
+    System.out.println("Page title is: " + driver.driver.getPageSource());	
+    
     Assert.assertEquals(driver.closeBrowser(), true);
     
   }

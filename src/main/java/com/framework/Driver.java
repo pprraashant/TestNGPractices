@@ -2,10 +2,11 @@ package com.framework;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 public class Driver
 {
-	WebDriver driver;
+	public WebDriver driver;
 	
 	public boolean launchBrowser(String browser)
 	{
@@ -26,6 +27,11 @@ public class Driver
 		if(browser.contains("chrome"))
 		{
 			driver=new ChromeDriver();
+		}
+		if(browser.contains("htmlunit"))
+		{
+			driver = new HtmlUnitDriver(true);
+			//((HtmlUnitDriver) driver).setJavascriptEnabled(true);
 		}
 		return true;
 		
