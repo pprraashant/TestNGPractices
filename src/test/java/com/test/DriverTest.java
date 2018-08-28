@@ -89,6 +89,7 @@ public class DriverTest {
     Driver driver=new Driver();
     Assert.assertTrue(driver.launchBrowser("htmlunit"));
     driver.driver.get("http://www.google.com");	
+    
     WebElement element = driver.driver.findElement(By.xpath("//*[@name='q']"));	
     element.click();
     // Enter a search query		
