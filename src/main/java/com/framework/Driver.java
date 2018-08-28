@@ -1,5 +1,6 @@
 package com.framework;
 
+import org.openqa.selenium.Proxy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
@@ -31,6 +32,11 @@ public class Driver
 		if(browser.contains("htmlunit"))
 		{
 			driver = new HtmlUnitDriver(true);
+	          
+				Proxy proxy = new Proxy();
+				proxy.setHttpProxy("135.28.13.11:8080"); 
+				((HtmlUnitDriver) driver).setProxySettings(proxy);
+	                     
 			//((HtmlUnitDriver) driver).setJavascriptEnabled(true);
 		}
 		return true;
