@@ -23,14 +23,14 @@ public class htmlUnitTest {
                      driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                    System.out.println(driver.getCurrentUrl());
                    System.out.println(((HtmlUnitDriver) driver).getBrowserVersion());
-                  //  WebElement element = driver.findElement(By.name("q"));	
+                    WebElement element = driver.findElement(By.name("q"));	
                      
                     // Enter a search query		
-                //    element.sendKeys("Guru99");	
+                    element.sendKeys("Guru99");	
                    
 		            // Submit the query. Webdriver searches for the form using the text input element automatically		
                     // No need to locate/find the submit button		
-               //     element.submit();			
+                    element.submit();			
                     
             		// This code will print the page title		
                     System.out.println("Page title is: " + driver.getTitle());		
