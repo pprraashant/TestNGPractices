@@ -24,7 +24,7 @@ public class DriverTest {
 	  System.out.println("Inside dataProvider void f method");
   }
   @BeforeMethod
-  public void beforeMethod() {
+  public void before1Method() {
 	  System.out.println("BeforeMethod");
   }
 

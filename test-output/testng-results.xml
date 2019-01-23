@@ -1,30 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="4" passed="3">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="6403" started-at="2018-07-05T05:11:03Z" finished-at="2018-07-05T05:11:10Z">
+  <suite name="Default suite" duration-ms="25534" started-at="2019-01-15T12:36:19Z" finished-at="2019-01-15T12:36:44Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="6403" started-at="2018-07-05T05:11:03Z" finished-at="2018-07-05T05:11:10Z">
-      <class name="com.test.DriverTest">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.test.DriverTest@9d209a]" name="beforeSuite" is-config="true" duration-ms="12" started-at="2018-07-05T10:41:03Z" finished-at="2018-07-05T10:41:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.test.DriverTest@9d209a]" name="beforeTest" is-config="true" duration-ms="1" started-at="2018-07-05T10:41:03Z" finished-at="2018-07-05T10:41:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.test.DriverTest@9d209a]" name="beforeClass" is-config="true" duration-ms="0" started-at="2018-07-05T10:41:03Z" finished-at="2018-07-05T10:41:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="FAIL" signature="closeBrowser()[pri:0, instance:com.test.DriverTest@9d209a]" name="closeBrowser" duration-ms="8" started-at="2018-07-05T10:41:03Z" finished-at="2018-07-05T10:41:03Z">
-          <exception class="java.lang.NullPointerException">
+    <test name="Default test" duration-ms="25534" started-at="2019-01-15T12:36:19Z" finished-at="2019-01-15T12:36:44Z">
+      <class name="com.test.CaptureScreenshot">
+        <test-method status="FAIL" signature="captureScreenMethod()[pri:0, instance:com.test.CaptureScreenshot@9a8472]" name="captureScreenMethod" duration-ms="25505" started-at="2019-01-15T18:06:19Z" finished-at="2019-01-15T18:06:44Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: Chrome failed to start: exited normally
+  (Driver info: chromedriver=2.2,platform=Windows NT 6.3 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23.50 seconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'PAWARP01', ip: '169.254.40.223', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_111'
+Driver info: driver.version: ChromeDriver]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.framework.Driver.closeBrowser(Driver.java:35)
-	at com.test.DriverTest.closeBrowser(DriverTest.java:88)
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: Chrome failed to start: exited normally
+  (Driver info: chromedriver=2.2,platform=Windows NT 6.3 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23.50 seconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'PAWARP01', ip: '169.254.40.223', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_111'
+Driver info: driver.version: ChromeDriver
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$new$0(JsonWireProtocolResponse.java:53)
+	at org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$getResponseFunction$2(JsonWireProtocolResponse.java:91)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:498)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:207)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:130)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:147)
+	at com.test.CaptureScreenshot.captureScreenMethod(CaptureScreenshot.java:45)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -51,91 +78,11 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.DriverTest@9d209a]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-07-05T10:41:03Z" finished-at="2018-07-05T10:41:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.DriverTest@9d209a]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-07-05T10:41:03Z" finished-at="2018-07-05T10:41:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.DriverTest@9d209a]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2018-07-05T10:41:03Z" finished-at="2018-07-05T10:41:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="f(java.lang.Integer, java.lang.String)[pri:0, instance:com.test.DriverTest@9d209a]" name="f" duration-ms="1" started-at="2018-07-05T10:41:03Z" data-provider="dp" finished-at="2018-07-05T10:41:03Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[a]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- f -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.DriverTest@9d209a]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2018-07-05T10:41:03Z" finished-at="2018-07-05T10:41:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.DriverTest@9d209a]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-07-05T10:41:03Z" finished-at="2018-07-05T10:41:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="f(java.lang.Integer, java.lang.String)[pri:0, instance:com.test.DriverTest@9d209a]" name="f" duration-ms="1" started-at="2018-07-05T10:41:03Z" data-provider="dp" finished-at="2018-07-05T10:41:03Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[b]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.DriverTest@9d209a]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-07-05T10:41:03Z" finished-at="2018-07-05T10:41:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.test.DriverTest@9d209a]" name="launchBrowser" duration-ms="6365" started-at="2018-07-05T10:41:03Z" finished-at="2018-07-05T10:41:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.DriverTest@9d209a]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-07-05T10:41:03Z" finished-at="2018-07-05T10:41:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.DriverTest@9d209a]" name="afterMethod" is-config="true" duration-ms="1" started-at="2018-07-05T10:41:10Z" finished-at="2018-07-05T10:41:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.test.DriverTest@9d209a]" name="afterClass" is-config="true" duration-ms="0" started-at="2018-07-05T10:41:10Z" finished-at="2018-07-05T10:41:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.test.DriverTest@9d209a]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-07-05T10:41:10Z" finished-at="2018-07-05T10:41:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.test.DriverTest@9d209a]" name="afterSuite" is-config="true" duration-ms="0" started-at="2018-07-05T10:41:10Z" finished-at="2018-07-05T10:41:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterSuite -->
-      </class> <!-- com.test.DriverTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- captureScreenMethod -->
+      </class> <!-- com.test.CaptureScreenshot -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

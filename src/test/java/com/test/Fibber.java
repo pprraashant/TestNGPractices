@@ -1,5 +1,6 @@
-package com.test;
-import java.util.Map;
+/* This is comment*/
+package com.test ;
+import java.util. * ;
 import java.util.HashMap;
 
 class Fibber {
@@ -43,11 +44,15 @@ class Fibber {
             return n;
         }
 
-        System.out.printf("computing fib(%d)\n", n);
+        System.out.printf("computing fib1(%d)\n", n);
         return fib1(n - 1) + fib1(n - 2);
     }
     public static void main(String [] args)
     {
+    	Integer i = new Integer(99);
+    	System.out.println(i);
+    	i=10;
+    	System.out.println(i);
     	Fibber fb=new Fibber();
     	fb.fib(5);
     	fb.fib1(5);

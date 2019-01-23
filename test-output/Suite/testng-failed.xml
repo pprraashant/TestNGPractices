@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test name="Test">
+  <test name="Test" preserve-order="false">
     <classes>
       <class name="com.test.DriverTest"/>
     </classes>
@@ -10,15 +10,15 @@
     <classes>
       <class name="com.test.DriverTest">
         <methods>
-          <include name="beforeMethod"/>
-          <include name="closeBrowser"/>
+          <include name="TC_02_closeBrowser"/>
+          <include name="before1Method"/>
           <include name="afterTest"/>
-          <include name="launchBrowser"/>
           <include name="beforeClass"/>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
           <include name="afterSuite"/>
           <include name="afterClass"/>
+          <include name="TC_01_launchBrowser" invocation-numbers="0 1"/>
           <include name="beforeSuite"/>
         </methods>
       </class> <!-- com.test.DriverTest -->
