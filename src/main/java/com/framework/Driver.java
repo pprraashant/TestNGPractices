@@ -28,6 +28,8 @@ public class Driver
 		if(browser.contains("chrome"))
 		{
 			driver=new ChromeDriver();
+			driver.get("");
+			driver.navigate().to("http");
 		}
 		if(browser.contains("htmlunit"))
 		{
