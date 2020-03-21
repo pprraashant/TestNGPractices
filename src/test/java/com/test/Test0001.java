@@ -8,12 +8,12 @@ public class Test0001 {
 	@Test(retryAnalyzer = com.test.RetryAnalyzer.class)
 	public void Test1()
 	{
-		Assert.assertEquals(false, true);
+		Assert.assertEquals(false, false);
 	}
 
 	@Test
 	public void Test2()
 	{
-		Assert.assertEquals(false, true);
+		Assert.assertEquals(false, false);
 	}
 }
