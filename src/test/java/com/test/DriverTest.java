@@ -100,7 +100,7 @@ public class DriverTest {
 		System.out.println("AfterSuite");
 	}
 
-	@Test(dataProvider = "dp1" , priority=3)
+	//@Test(dataProvider = "dp1" , priority=3) TODO Enable to after test of git Actions
 	public void TC_01_launchBrowser(Integer n, String s) {
 
 		System.out.println("Insider LaunchBrowser Test");
